@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Overpass;
+  src: url('./task/Overpass/Overpass-VariableFont_wght.ttf');
+}
+
+body {
+  margin: 0 !important;
+  width: 100%;
+  height: 100vh;
+  background-color:  hsl(216, 12%, 8%);
+  font-family: Overpass;
+}
+
+h1{
+  margin: 0;
+}
+p{
+  font-size: 15px;
+}
+
+main{
+  width: 100%;
+  @apply flex justify-center items-center h-[100vh];
+}
+
+section{
+  background-image: linear-gradient(to bottom,hsl(215, 20%, 17%),hsl(217, 28%, 13%));
+  @apply w-[350px] h-fit rounded-[15px] p-[1.4rem] flex flex-col gap-4
+}
+
+section .star{
+  background-color: #252E38;
+  width: 30px;
+  height: 30px;
+  @apply flex justify-center items-center rounded-full;
+}
+
+.star img{
+  @apply w-[40%]
+}
+
+.title{
+  font-weight: 700;
+  @apply text-white text-[1.5rem]
+}
+
+.note{
+  @apply text-[#959eac]
+}
+
+.rate{
+  @apply flex justify-between text-[#959eac] py-4
+}
+
+.rate div{
+  cursor: pointer;
+  @apply bg-[#262F38] w-[2.7rem] h-[2.7rem] flex justify-center items-center rounded-full text-center
+}
+
+.rate div:hover{
+  @apply bg-[#FC7613] text-white
+}
+
+.selected{
+  background-color: #7B8897 !important;
+  @apply text-white
+}
+
+.submit{
+  @apply w-full py-2 text-white bg-[#FC7613] rounded-full mb-4 text-center
+}
+
+.submit:hover{
+  @apply w-full py-2 bg-white text-[#FC7613] rounded-full mb-4
+}
